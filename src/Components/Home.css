@@ -117,7 +117,7 @@ html{
 
 }
 .services-box{
-    margin-top:5%;
+    margin-top:2%;
     display:flex;
     flex-wrap: wrap;
     justify-content:space-evenly;  
@@ -125,63 +125,62 @@ html{
     width: 80%; 
     margin-left:9%;
 }
-.service-card{
-    flex-basis:32%;
+.ser-image{
     border-radius:10px;
-    /* margin-top:30px; */
-    position: relative;
-    overflow:hidden;
-    display: inline-block;
-    padding: 20px;
+    flex-basis:48%;
+    color:#fff;
+    margin-bottom:20px;
+    position:relative;
+    text-align: center;
 }
-.service-card img{
-    border-radius: 10px;
-    display:inline-block;
-    height:350px;
-    width: 600px;
+.overlay,.ser-image img{
+    border-radius: 7px;
+    width:100%;
+    /* background:linear-gradient(rgba(0,0,0,0.5),rgba(215,50,0.731)) */
 }
-.service-desc:hover{
-    background: linear-gradient(rgba(105, 70, 70, 0.5),rgb(244, 109, 75));
+.overlay{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(215,50,0.731));
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    position:absolute;
+    top:0;
+    transition:1s;
+}
+.ser-image:hover .overlay{
+    opacity: 1;
+    
 }
 .service-desc{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    /* transform: translateX(-50%); */
+    -webkit-transform: translateX(-70%);
+    transform: translateX(-70%);
     position: absolute;
     bottom:0px;
-    left:0px;
-    transition: 0.5s;
+    left:60%;
+    transition:1s;
+    opacity: 0;
+    width:80%;
 }
 .service-desc h3{
-position: absolute;
-left: 50%;
-bottom: 0;
-width: 100%;
-font-weight: 600;
-transform: translateX(-50%);
-transition: 0.5s;
+  background:#fff;
+  border:0;
+  height:2px;
+  margin:10px auto;
+  width:70%;
+  margin-bottom:10px;
 }
-.service-desc hr{
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 100%;
-    font-weight: 600;
-    transform: translateX(-50%);
-    transition: 0.5s;
-    }
+hr{
+  margin-left:70px;
+}
     .service-desc p{
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 100%;
-        font-weight: 600;
-        transform: translateX(-50%);
-        transition: 0.5s;
-        }
+        font-size:14px;
+        margin-left:70px;
+    }
         
-    
+    .ser-image:hover .service-desc{
+        bottom:40%;
+        opacity:1;
+    }
 
 /* ----------------------------------Features---------------------------------------------- */
 
@@ -376,4 +375,27 @@ transition: 0.5s;
     padding: 10px;
     /* border:1px solid red; */
     width: 30%;
+}
+.social-links{
+    align-items: center;
+    /* border:1px solid black; */
+    margin-top:50px;
+    display: flex;
+    padding-left:800px;
+}
+.img{
+    border:1px solid #009688;
+    margin-right:10px;
+
+}
+.img:hover{
+    background-color:#009688;
+}
+.img img{
+    height:50px;
+    width:50px;
+    align-items: center;
+    /* margin-left:200px; */
+    padding:20px;
+    background-color: transparent;
 }

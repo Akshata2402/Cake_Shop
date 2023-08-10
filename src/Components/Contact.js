@@ -1,5 +1,8 @@
 import React from 'react'
-import LOGO from './images/Logo.png'
+import Twitter from './images/Twitter.png'
+import Fb from './images/fb.jpg';
+import Insta from './images/insta.jpg';
+import Youtube from './images/you tube.jpg';
 export default function Contact() {
   return (
     <div className='contact' id='Contact'>
@@ -21,6 +24,20 @@ export default function Contact() {
           <p>1233456677 </p>
         </div>
       </div>
+      <div className='social-links'>
+         <div className='img'>
+          <img src={Twitter} alt="" />
+         </div>
+         <div className='img'>
+          <img src={Fb} alt="" />
+         </div>
+         <div className='img'>
+          <img src={Insta} alt="" />
+         </div>
+         <div className='img'>
+          <img src={Youtube} alt="" />
+         </div>
+         </div>
     </div>
   )
 }
